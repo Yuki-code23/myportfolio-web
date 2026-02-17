@@ -1,0 +1,15 @@
+version: '3.8'
+
+services:
+  app:
+    image: mcr.microsoft.com/devcontainers/typescript-node:1-20-bullseye
+    container_name: myportfolio-dev
+    volumes:
+      - .:/workspace:cached
+    working_dir: /workspace
+    command: sleep infinity
+    ports:
+      - "3000:3000"
+    # Ensure the user in container matches the host user to avoid permission issues if possible,
+    # though devcontainers image handles 'node' user well.
+    user: node
