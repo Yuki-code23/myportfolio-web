@@ -180,14 +180,6 @@ export default function ProjectDetailPage() {
               </div>
             </AnimatedSection>
 
-            <AnimatedSection delay={0.1}>
-              <div className="glass-effect rounded-2xl p-8">
-                <h2 className="text-3xl font-bold mb-6">Project Overview</h2>
-                <div className="space-y-4 text-gray-400 whitespace-pre-wrap">
-                  {project.description}
-                </div>
-              </div>
-            </AnimatedSection>
           </div>
 
           {/* Project Info */}

@@ -32,6 +32,10 @@ function normalizeProject(project: any): Project {
         ...project,
         // タイポ (descriotion) があっても description として扱う
         description: project.description || project.descriotion || '',
+        // image_url がオブジェクト（microCMSの画像フィールド）の場合は url を抽出
+        image_url: typeof project.image_url === 'object' && project.image_url !== null
+            ? project.image_url.url
+            : project.image_url || '',
         // category が配列で返ってくる場合に対応（最初の要素を取得）
         category: Array.isArray(project.category) ? project.category[0] : project.category,
         technologies: typeof project.technologies === 'string'
