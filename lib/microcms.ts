@@ -1,8 +1,8 @@
 import { createClient } from 'microcms-js-sdk'
 
 const client = createClient({
-    serviceDomain: process.env.MICROCMS_SERVICE_DOMAIN || '',
-    apiKey: process.env.MICROCMS_API_KEY || '',
+    serviceDomain: process.env.NEXT_PUBLIC_MICROCMS_SERVICE_DOMAIN || '',
+    apiKey: process.env.NEXT_PUBLIC_MICROCMS_API_KEY || '',
 })
 
 // Types
@@ -25,13 +25,23 @@ interface ProjectsResponse {
     limit: number
 }
 
+// Helper to normalize data from microCMS
+function normalizeProject(project: any): Project {
+    return {
+        ...project,
+        technologies: typeof project.technologies === 'string'
+            ? project.technologies.split(',').map((t: string) => t.trim()).filter(Boolean)
+            : Array.isArray(project.technologies) ? project.technologies : []
+    }
+}
+
 // Get all projects
 export async function getProjects(): Promise<Project[]> {
     const data = await client.get<ProjectsResponse>({
         endpoint: 'projects',
         queries: { orders: '-createdAt', limit: 100 },
     })
-    return data.contents
+    return data.contents.map(normalizeProject)
 }
 
 // Get featured projects (latest 6)
@@ -40,7 +50,7 @@ export async function getFeaturedProjects(): Promise<Project[]> {
         endpoint: 'projects',
         queries: { orders: '-createdAt', limit: 6 },
     })
-    return data.contents
+    return data.contents.map(normalizeProject)
 }
 
 // Get single project by ID
@@ -49,5 +59,5 @@ export async function getProjectById(id: string): Promise<Project> {
         endpoint: 'projects',
         contentId: id,
     })
-    return data
+    return normalizeProject(data)
 }

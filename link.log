@@ -1,6 +1,3 @@
-Need to install the following packages:
-vercel@50.18.2
-Ok to proceed? (y) 
 Vercel CLI 50.18.2
 Loading scopes…
 Searching for existing projects…
@@ -13,3 +10,5 @@ Merging default Project Settings for Next.js. Previously listed overrides are pr
 > Auto-detected Project Settings for Next.js
 
 Linked to yukis-projects-55465e1f/workspace (created .vercel)
+> Connecting GitHub repository: https://github.com/Yuki-code23/myportfolio-web
+> Connected
