@@ -183,22 +183,8 @@ export default function ProjectDetailPage() {
             <AnimatedSection delay={0.1}>
               <div className="glass-effect rounded-2xl p-8">
                 <h2 className="text-3xl font-bold mb-6">Project Overview</h2>
-                <div className="space-y-4 text-gray-400">
-                  <p>
-                    This project demonstrates expertise in modern web development
-                    practices, combining cutting-edge technologies with exceptional
-                    design to create a seamless user experience.
-                  </p>
-                  <p>
-                    The implementation focuses on performance, scalability, and
-                    maintainability, ensuring a robust solution that meets both
-                    current and future requirements.
-                  </p>
-                  <p>
-                    Special attention was given to responsive design, accessibility,
-                    and user experience, making the application intuitive and
-                    enjoyable to use across all devices.
-                  </p>
+                <div className="space-y-4 text-gray-400 whitespace-pre-wrap">
+                  {project.description}
                 </div>
               </div>
             </AnimatedSection>
