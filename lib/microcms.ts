@@ -1,5 +1,8 @@
 import { createClient } from 'microcms-js-sdk'
 
+console.log('MicroCMS Config - Domain:', process.env.NEXT_PUBLIC_MICROCMS_SERVICE_DOMAIN)
+console.log('MicroCMS Config - Key present:', !!process.env.NEXT_PUBLIC_MICROCMS_API_KEY)
+
 const client = createClient({
     serviceDomain: process.env.NEXT_PUBLIC_MICROCMS_SERVICE_DOMAIN || '',
     apiKey: process.env.NEXT_PUBLIC_MICROCMS_API_KEY || '',
