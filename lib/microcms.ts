@@ -1,7 +1,5 @@
 import { createClient } from 'microcms-js-sdk'
 
-console.log('MicroCMS Config - Domain:', process.env.NEXT_PUBLIC_MICROCMS_SERVICE_DOMAIN)
-console.log('MicroCMS Config - Key present:', !!process.env.NEXT_PUBLIC_MICROCMS_API_KEY)
 
 const client = createClient({
     serviceDomain: process.env.NEXT_PUBLIC_MICROCMS_SERVICE_DOMAIN || '',
@@ -32,6 +30,10 @@ interface ProjectsResponse {
 function normalizeProject(project: any): Project {
     return {
         ...project,
+        // タイポ (descriotion) があっても description として扱う
+        description: project.description || project.descriotion || '',
+        // category が配列で返ってくる場合に対応（最初の要素を取得）
+        category: Array.isArray(project.category) ? project.category[0] : project.category,
         technologies: typeof project.technologies === 'string'
             ? project.technologies.split(',').map((t: string) => t.trim()).filter(Boolean)
             : Array.isArray(project.technologies) ? project.technologies : []

@@ -22,7 +22,6 @@ export default function ProjectDetailPage() {
       try {
         const id = params.id as string
         const data = await getProjectById(id)
-        console.log('Project Detail Data:', data)
         setProject(data)
       } catch (error) {
         console.error('Error fetching project:', error)
