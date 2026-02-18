@@ -1,0 +1,15 @@
+Need to install the following packages:
+vercel@50.18.2
+Ok to proceed? (y) 
+Vercel CLI 50.18.2
+Loading scopes…
+Searching for existing projects…
+Local settings detected in vercel.json:
+- Build Command: npm run build
+- Development Command: npm run dev
+- Framework: nextjs
+- Install Command: npm install
+Merging default Project Settings for Next.js. Previously listed overrides are prioritized.
+> Auto-detected Project Settings for Next.js
+
+Linked to yukis-projects-55465e1f/workspace (created .vercel)

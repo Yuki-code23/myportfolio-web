@@ -1,0 +1,3 @@
+#!/bin/sh
+echo "xdg-open called with: $@"
+exit 0

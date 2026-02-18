@@ -3,7 +3,7 @@
 import { useEffect, useState } from 'react'
 import { motion } from 'framer-motion'
 import Link from 'next/link'
-import { projectApi, Project } from '@/lib/supabase'
+import { getFeaturedProjects, Project } from '@/lib/microcms'
 import ProjectCard from '@/components/projects/ProjectCard'
 import AnimatedSection from '@/components/home/AnimatedSection'
 import { HiArrowRight } from 'react-icons/hi'
@@ -15,7 +15,7 @@ export default function FeaturedProjects() {
   useEffect(() => {
     const fetchProjects = async () => {
       try {
-        const data = await projectApi.getFeatured()
+        const data = await getFeaturedProjects()
         setProjects(data)
       } catch (error) {
         console.error('Error fetching projects:', error)

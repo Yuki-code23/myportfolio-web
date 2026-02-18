@@ -3,7 +3,7 @@
 import { motion } from 'framer-motion'
 import Image from 'next/image'
 import Link from 'next/link'
-import { Project } from '@/lib/supabase'
+import { Project } from '@/lib/microcms'
 import { HiArrowRight } from 'react-icons/hi'
 import { cardHover, imageZoom } from '@/lib/animations'
 
@@ -37,10 +37,10 @@ export default function ProjectCard({ project, index }: ProjectCardProps) {
                 className="object-cover"
               />
             </motion.div>
-            
+
             {/* Overlay */}
             <div className="absolute inset-0 bg-gradient-to-t from-matt-black via-matt-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-            
+
             {/* Category badge */}
             <div className="absolute top-4 right-4 px-4 py-2 glass-effect rounded-full text-sm font-medium text-gold">
               {project.category}
@@ -52,7 +52,7 @@ export default function ProjectCard({ project, index }: ProjectCardProps) {
             <h3 className="text-2xl font-bold mb-2 text-white group-hover:text-gold transition-colors">
               {project.title}
             </h3>
-            
+
             <p className="text-gray-400 mb-4 line-clamp-2">
               {project.description}
             </p>

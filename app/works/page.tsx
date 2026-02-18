@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from 'react'
 import { motion } from 'framer-motion'
-import { projectApi, Project } from '@/lib/supabase'
+import { getProjects, Project } from '@/lib/microcms'
 import ProjectCard from '@/components/projects/ProjectCard'
 import AnimatedSection from '@/components/home/AnimatedSection'
 import { fadeInUp } from '@/lib/animations'
@@ -25,7 +25,7 @@ export default function WorksPage() {
   useEffect(() => {
     const fetchProjects = async () => {
       try {
-        const data = await projectApi.getAll()
+        const data = await getProjects()
         setProjects(data)
         setFilteredProjects(data)
       } catch (error) {
@@ -102,8 +102,8 @@ export default function WorksPage() {
                 key={category}
                 onClick={() => filterProjects(category)}
                 className={`px-6 py-3 rounded-full font-medium smooth-transition cursor-pointer ${activeCategory === category
-                    ? 'bg-gold text-matt-black'
-                    : 'glass-effect text-white hover:border-gold'
+                  ? 'bg-gold text-matt-black'
+                  : 'glass-effect text-white hover:border-gold'
                   }`}
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}

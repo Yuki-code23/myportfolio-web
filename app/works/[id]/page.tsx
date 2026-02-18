@@ -5,7 +5,7 @@ import { useParams, useRouter } from 'next/navigation'
 import { motion } from 'framer-motion'
 import Image from 'next/image'
 import Link from 'next/link'
-import { projectApi, Project } from '@/lib/supabase'
+import { getProjectById, Project } from '@/lib/microcms'
 import AnimatedSection from '@/components/home/AnimatedSection'
 import { fadeInUp } from '@/lib/animations'
 import { HiArrowLeft, HiExternalLink, HiCode } from 'react-icons/hi'
@@ -21,7 +21,7 @@ export default function ProjectDetailPage() {
     const fetchProject = async () => {
       try {
         const id = params.id as string
-        const data = await projectApi.getById(id)
+        const data = await getProjectById(id)
         setProject(data)
       } catch (error) {
         console.error('Error fetching project:', error)
@@ -219,7 +219,7 @@ export default function ProjectDetailPage() {
                   <div>
                     <p className="text-gray-400 text-sm mb-2">Date</p>
                     <p className="text-white font-medium">
-                      {new Date(project.created_at).toLocaleDateString('en-US', {
+                      {new Date(project.createdAt).toLocaleDateString('en-US', {
                         year: 'numeric',
                         month: 'long',
                       })}
