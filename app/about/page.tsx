@@ -1,6 +1,7 @@
 'use client'
 
 import { motion } from 'framer-motion'
+import Image from 'next/image'
 import AnimatedSection from '@/components/home/AnimatedSection'
 import { fadeInUp } from '@/lib/animations'
 import {
@@ -85,62 +86,80 @@ const experiences = [
 
 export default function AboutPage() {
   return (
-    <div className="pt-32 pb-20 bg-matt-black">
+    <div className="pt-32 pb-20 bg-matt-black overflow-hidden">
       {/* Hero Section */}
-      <section className="container-custom mb-20">
-        <AnimatedSection>
-          <motion.p
-            variants={fadeInUp}
-            className="text-gold font-medium mb-4 tracking-wider"
-          >
-            ABOUT ME
-          </motion.p>
+      <section className="container-custom mb-20 relative">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          <AnimatedSection>
+            <motion.p
+              variants={fadeInUp}
+              className="text-gold font-medium mb-4 tracking-wider"
+            >
+              ABOUT ME
+            </motion.p>
 
-          <motion.div variants={fadeInUp} className="mb-8">
-            <h2 className="text-2xl md:text-3xl font-bold text-white mb-2">
-              植本 裕貴 <span className="text-gray-500 font-normal">/ Yuki Uemoto</span>
-            </h2>
-            <p className="text-gold font-medium">Hiroshima, Japan</p>
-          </motion.div>
+            <motion.div variants={fadeInUp} className="mb-8">
+              <h2 className="text-2xl md:text-3xl font-bold text-white mb-2">
+                植本 裕貴 <span className="text-gray-500 font-normal">/ Yuki Uemoto</span>
+              </h2>
+              <p className="text-gold font-medium">Hiroshima, Japan</p>
+            </motion.div>
 
-          <motion.h1
-            variants={fadeInUp}
-            className="text-5xl md:text-7xl font-bold mb-8 leading-tight"
-          >
-            Multi-Creator &<br />
-            <span className="gradient-text">Design Engineer</span>
-          </motion.h1>
+            <motion.h1
+              variants={fadeInUp}
+              className="text-5xl md:text-7xl font-bold mb-8 leading-tight"
+            >
+              Multi-Creator &<br />
+              <span className="gradient-text">Design Engineer</span>
+            </motion.h1>
 
-          <motion.div
-            variants={fadeInUp}
-            className="text-gray-400 text-lg space-y-6 max-w-3xl"
-          >
-            <p>
-              2000年8月生まれ、広島県出身。
-              2025年9月より、デザインとエンジニアリングを横断する「マルチクリエイター」として活動を開始しました。
-              AI駆動開発（AI-Driven Development）を駆使し、圧倒的なスピード感で高品質なプロダクトを生み出すスタイルを得意としています。
-            </p>
-            <p>
-              「Design Engineer」として、使い心地とビジュアル、そして技術的な機能美のすべてが融合したデジタル体験の創出を目指しています。
-              現在はフリーランスとして、求人LP制作やAI自動化アプリの開発など、多岐にわたるプロジェクトに携わっています。
-            </p>
-            <p>
-              クリエイターとしての活動は開発に留まらず、ライブ配信（Palmu）では最高ランクのS帯を半年以上維持。
-              自身の配信のみならず、約10名のライバーをA帯へと導くなど、クリエイター支援やコミュニティ形成にも情熱を注いでいます。
-            </p>
-            <div className="pt-4 border-t border-gold/10">
-              <h4 className="text-white font-bold mb-2">Personal & Hobbies</h4>
+            <motion.div
+              variants={fadeInUp}
+              className="text-gray-400 text-lg space-y-6 max-w-2xl"
+            >
               <p>
-                動物が大好きで、家ではハリネズミ3匹、モモンガ5匹、モルモット2匹と一緒に賑やかに暮らしています。
-                ギター演奏やカフェ巡りも、創作意欲を刺激する大切な時間です。
+                2000年8月生まれ、広島県出身。
+                2025年9月より、デザインとエンジニアリングを横断する「マルチクリエイター」として活動を開始しました。
+                AI駆動開発（AI-Driven Development）を駆使し、圧倒的なスピード感で高品質なプロダクトを生み出すスタイルを得意としています。
               </p>
+              <p>
+                「Design Engineer」として、使い心地とビジュアル、そして技術的な機能美のすべてが融合したデジタル体験の創出を目指しています。
+              </p>
+              <p>
+                クリエイターとしての活動は開発に留まらず、ライブ配信（Palmu）では最高ランクのS帯を半年以上維持。
+                クリエイター支援やコミュニティ形成にも情熱を注いでいます。
+              </p>
+              <div className="pt-4 border-t border-gold/10">
+                <h4 className="text-white font-bold mb-2">Personal & Hobbies</h4>
+                <p>
+                  動物が大好きで、家ではハリネズミ、モモンガ、モルモットたちと一緒に賑やかに暮らしています。
+                  ギター演奏やカフェ巡りも、創作意欲を刺激する大切な時間です。
+                </p>
+              </div>
+            </motion.div>
+          </AnimatedSection>
+
+          {/* Miyajima Image with Seamless Blend - Positioned at Top Right Edge */}
+          <motion.div
+            initial={{ opacity: 0, scale: 1.1 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 1.5, ease: "easeOut" }}
+            className="absolute -top-32 -right-64 hidden lg:block h-[800px] w-[60%] z-0 pointer-events-none"
+          >
+            <div className="absolute inset-0 z-10 bg-gradient-to-r from-matt-black via-matt-black/20 to-transparent" />
+            <div className="absolute inset-0 z-10 bg-gradient-to-b from-matt-black/20 via-transparent to-matt-black" />
+            <div className="relative h-full w-full">
+              <Image
+                src="/miyajima.jpg"
+                alt="Miyajima Itsukushima Shrine Torii Gate"
+                fill
+                className="object-cover opacity-60"
+                priority
+              />
             </div>
           </motion.div>
-        </AnimatedSection>
+        </div>
       </section>
-
-      {/* Skills Section */}
-      {/* ... (rest of the file remains same or as previously updated) */}
 
       {/* Skills Section */}
       <section className="container-custom mb-20">

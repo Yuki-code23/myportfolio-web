@@ -72,7 +72,7 @@ export default function FeaturedProjects() {
               transition={{ delay: 0.2 }}
               className="text-gray-400 max-w-2xl mx-auto"
             >
-              Explore my latest works showcasing design excellence and technical expertise
+              デザイン性と技術力を兼ね備えた、最新の制作実績をご紹介します。
             </motion.p>
           </div>
         </AnimatedSection>

@@ -68,8 +68,8 @@ export default function Hero() {
           variants={fadeInUp}
           className="text-gray-400 text-lg md:text-xl max-w-2xl mx-auto mb-12"
         >
-          Crafting exceptional digital experiences through innovative design
-          and cutting-edge technology
+          革新的なデザインと最先端の技術を融合し、
+          圧倒的なデジタル体験を創造します。
         </motion.p>
 
         {/* CTA Buttons */}

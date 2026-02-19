@@ -86,9 +86,8 @@ export default function WorksPage() {
             variants={fadeInUp}
             className="text-gray-400 text-lg max-w-3xl"
           >
-            Explore my collection of projects showcasing design excellence,
-            technical expertise, and creative problem-solving across various
-            domains.
+            デザイン、技術、そして課題解決へのアプローチを詰め込んだ、
+            多岐にわたるプロジェクトのコレクションをご覧ください。
           </motion.p>
         </AnimatedSection>
       </section>
@@ -160,7 +159,7 @@ export default function WorksPage() {
                   viewport={{ once: true }}
                   transition={{ delay: 0.1 }}
                 >
-                  S-Tier
+                  S Rank
                 </motion.h3>
                 <p className="text-gray-400">Streaming Rank</p>
               </div>
