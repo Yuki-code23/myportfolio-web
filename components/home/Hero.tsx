@@ -10,7 +10,7 @@ export default function Hero() {
     <section className="min-h-screen flex items-center justify-center relative overflow-hidden">
       {/* Background gradient */}
       <div className="absolute inset-0 bg-gradient-to-br from-matt-black via-dark-gray to-matt-black" />
-      
+
       {/* Animated background elements */}
       <div className="absolute inset-0 overflow-hidden">
         <motion.div
@@ -59,8 +59,8 @@ export default function Hero() {
           variants={fadeInUp}
           className="text-5xl md:text-7xl lg:text-8xl font-bold mb-6"
         >
-          Designer &<br />
-          <span className="gradient-text">Engineer</span>
+          Multi-Creator &<br />
+          <span className="gradient-text">Design Engineer</span>
         </motion.h1>
 
         {/* Description */}
@@ -87,7 +87,7 @@ export default function Hero() {
               <HiArrowRight className="text-xl" />
             </motion.button>
           </Link>
-          
+
           <Link href="/contact">
             <motion.button
               className="btn-outline cursor-pointer"

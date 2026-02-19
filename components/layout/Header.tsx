@@ -29,9 +29,8 @@ export default function Header() {
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled ? 'glass-effect py-4' : 'bg-transparent py-6'
-      }`}
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? 'glass-effect py-4' : 'bg-transparent py-6'
+        }`}
     >
       <nav className="container-custom flex items-center justify-between">
         {/* Logo */}
@@ -41,7 +40,7 @@ export default function Header() {
             animate={{ opacity: 1, x: 0 }}
             className="text-2xl font-bold gradient-text cursor-pointer"
           >
-            PORTFOLIO
+            Yuki Uemoto
           </motion.div>
         </Link>
 
@@ -60,9 +59,8 @@ export default function Header() {
             >
               <Link
                 href={item.path}
-                className={`text-sm font-medium smooth-transition relative ${
-                  pathname === item.path ? 'text-gold' : 'text-white hover:text-gold'
-                }`}
+                className={`text-sm font-medium smooth-transition relative ${pathname === item.path ? 'text-gold' : 'text-white hover:text-gold'
+                  }`}
               >
                 {item.name}
                 {pathname === item.path && (
@@ -101,9 +99,8 @@ export default function Header() {
                 <li key={item.path}>
                   <Link
                     href={item.path}
-                    className={`block text-lg font-medium smooth-transition ${
-                      pathname === item.path ? 'text-gold' : 'text-white hover:text-gold'
-                    }`}
+                    className={`block text-lg font-medium smooth-transition ${pathname === item.path ? 'text-gold' : 'text-white hover:text-gold'
+                      }`}
                     onClick={() => setIsMobileMenuOpen(false)}
                   >
                     {item.name}

@@ -8,7 +8,8 @@ import {
   HiColorSwatch,
   HiDeviceMobile,
   HiLightningBolt,
-  HiCheckCircle
+  HiCheckCircle,
+  HiOutlineTerminal
 } from 'react-icons/hi'
 
 const skills = [
@@ -16,33 +17,30 @@ const skills = [
     category: 'Frontend Development',
     icon: HiCode,
     items: [
-      'React / Next.js',
-      'TypeScript / JavaScript',
-      'Tailwind CSS / Styled Components',
-      'Framer Motion / GSAP',
-      'HTML5 / CSS3',
+      'React',
+      'Next.js',
+      'TypeScript',
+      'Tailwind CSS',
+      'Framer Motion',
     ],
   },
   {
     category: 'Design',
     icon: HiColorSwatch,
     items: [
-      'UI/UX Design',
-      'Figma / Adobe XD',
-      'Adobe Photoshop / Illustrator',
-      'Prototyping',
-      'Design Systems',
+      'Figma',
+      'Canva',
+      'STUDIO',
     ],
   },
   {
-    category: 'Backend & Database',
+    category: 'Backend',
     icon: HiLightningBolt,
     items: [
-      'Node.js / Express',
-      'Supabase / Firebase',
-      'PostgreSQL / MongoDB',
-      'RESTful APIs',
-      'GraphQL',
+      'Node.js',
+      'MicroCMS',
+      'Supabase',
+      'PostgreSQL',
     ],
   },
   {
@@ -50,32 +48,38 @@ const skills = [
     icon: HiDeviceMobile,
     items: [
       'React Native',
-      'Responsive Design',
-      'Git / GitHub',
-      'Vercel / Netlify',
-      'Agile / Scrum',
+      'Git',
+      'Vercel',
+    ],
+  },
+  {
+    category: 'IDE',
+    icon: HiOutlineTerminal,
+    items: [
+      'VS Code',
+      'Antigravity',
     ],
   },
 ]
 
 const experiences = [
   {
-    year: '2023 - Present',
-    title: 'Senior Full-Stack Developer',
-    company: 'Tech Innovations Inc.',
-    description: 'Leading development of enterprise-level web applications using Next.js and modern tech stack.',
+    year: '2025.09 - Present',
+    title: 'Multi-Creator & Design Engineer (Freelance)',
+    company: 'Nomad Lab / Product Lab',
+    description: 'AI駆動開発を中心に、ITリテラシーを高めながらプロダクト開発に注力。総合サービス企業のWebサイト修正、ITサポート企業の求人LP作成、社内請求書AI発行アプリの開発などに携わる。',
   },
   {
-    year: '2021 - 2023',
-    title: 'UI/UX Designer & Frontend Developer',
-    company: 'Creative Digital Agency',
-    description: 'Designed and developed responsive websites and web applications for various clients.',
+    year: '2025.04 - 2025.08',
+    title: 'IT Technical Specialist',
+    company: 'IT・エンジニアリング支援企業',
+    description: 'IT業界へのキャリア転換を見据え、技術スタックの基盤構築と実務スキルの習得に専念。短期間でAI駆動開発やモダンフロントエンド技術への移行を実現。',
   },
   {
-    year: '2019 - 2021',
-    title: 'Junior Web Developer',
-    company: 'StartUp Solutions',
-    description: 'Built and maintained web applications, collaborated with design team on UI implementations.',
+    year: '2023.04 - 2025.03',
+    title: 'Branch Manager & Regional Captain',
+    company: '株式会社トライグループ',
+    description: '教室長として最大150名の生徒管理および教室経営に従事。毎月の営業目標を達成。2024年には中四国・九州エリアの約9教室を束ねるキャプテンとして、地域全体の売上に貢献。',
   },
 ]
 
@@ -92,31 +96,51 @@ export default function AboutPage() {
             ABOUT ME
           </motion.p>
 
+          <motion.div variants={fadeInUp} className="mb-8">
+            <h2 className="text-2xl md:text-3xl font-bold text-white mb-2">
+              植本 裕貴 <span className="text-gray-500 font-normal">/ Yuki Uemoto</span>
+            </h2>
+            <p className="text-gold font-medium">Hiroshima, Japan</p>
+          </motion.div>
+
           <motion.h1
             variants={fadeInUp}
-            className="text-5xl md:text-7xl font-bold mb-8"
+            className="text-5xl md:text-7xl font-bold mb-8 leading-tight"
           >
-            Creating Digital <span className="gradient-text">Excellence</span>
+            Multi-Creator &<br />
+            <span className="gradient-text">Design Engineer</span>
           </motion.h1>
 
           <motion.div
             variants={fadeInUp}
-            className="text-gray-400 text-lg space-y-4 max-w-3xl"
+            className="text-gray-400 text-lg space-y-6 max-w-3xl"
           >
             <p>
-              I'm a passionate designer and engineer with over 5 years of experience
-              crafting exceptional digital experiences. My expertise spans across
-              modern web technologies, user interface design, and creating scalable
-              applications.
+              2000年8月生まれ、広島県出身。
+              2025年9月より、デザインとエンジニアリングを横断する「マルチクリエイター」として活動を開始しました。
+              AI駆動開発（AI-Driven Development）を駆使し、圧倒的なスピード感で高品質なプロダクトを生み出すスタイルを得意としています。
             </p>
             <p>
-              I believe in the perfect blend of aesthetics and functionality,
-              ensuring every project not only looks stunning but also delivers
-              outstanding performance and user experience.
+              「Design Engineer」として、使い心地とビジュアル、そして技術的な機能美のすべてが融合したデジタル体験の創出を目指しています。
+              現在はフリーランスとして、求人LP制作やAI自動化アプリの開発など、多岐にわたるプロジェクトに携わっています。
             </p>
+            <p>
+              クリエイターとしての活動は開発に留まらず、ライブ配信（Palmu）では最高ランクのS帯を半年以上維持。
+              自身の配信のみならず、約10名のライバーをA帯へと導くなど、クリエイター支援やコミュニティ形成にも情熱を注いでいます。
+            </p>
+            <div className="pt-4 border-t border-gold/10">
+              <h4 className="text-white font-bold mb-2">Personal & Hobbies</h4>
+              <p>
+                動物が大好きで、家ではハリネズミ3匹、モモンガ5匹、モルモット2匹と一緒に賑やかに暮らしています。
+                ギター演奏やカフェ巡りも、創作意欲を刺激する大切な時間です。
+              </p>
+            </div>
           </motion.div>
         </AnimatedSection>
       </section>
+
+      {/* Skills Section */}
+      {/* ... (rest of the file remains same or as previously updated) */}
 
       {/* Skills Section */}
       <section className="container-custom mb-20">

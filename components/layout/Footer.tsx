@@ -1,14 +1,12 @@
 'use client'
 
 import Link from 'next/link'
-import { FaGithub, FaLinkedin, FaTwitter, FaDribbble } from 'react-icons/fa'
+import { FaGithub, FaXTwitter } from 'react-icons/fa6'
 import { motion } from 'framer-motion'
 
 const socialLinks = [
-  { icon: FaGithub, href: 'https://github.com', label: 'GitHub' },
-  { icon: FaLinkedin, href: 'https://linkedin.com', label: 'LinkedIn' },
-  { icon: FaTwitter, href: 'https://twitter.com', label: 'Twitter' },
-  { icon: FaDribbble, href: 'https://dribbble.com', label: 'Dribbble' },
+  { icon: FaGithub, href: 'https://github.com/Yuki-code23', label: 'GitHub' },
+  { icon: FaXTwitter, href: 'https://x.com', label: 'X (Twitter)' },
 ]
 
 const footerLinks = [
@@ -31,7 +29,7 @@ export default function Footer() {
                 whileHover={{ scale: 1.05 }}
                 className="text-2xl font-bold gradient-text mb-4 cursor-pointer inline-block"
               >
-                PORTFOLIO
+                Yuki Uemoto
               </motion.h3>
             </Link>
             <p className="text-gray-400 text-sm">
@@ -83,7 +81,7 @@ export default function Footer() {
         {/* Copyright */}
         <div className="border-t border-gold/10 pt-8 text-center">
           <p className="text-gray-400 text-sm">
-            © {currentYear} Portfolio. All rights reserved.
+            © {currentYear} Yuki Uemoto. All rights reserved.
           </p>
         </div>
       </div>
