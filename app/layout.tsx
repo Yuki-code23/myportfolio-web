@@ -11,9 +11,12 @@ const inter = Inter({
 })
 
 export const metadata = {
-  title: 'Portfolio - Designer & Engineer',
-  description: 'High-end portfolio showcasing design and engineering excellence',
-  keywords: ['portfolio', 'designer', 'engineer', 'web development', 'creative'],
+  title: {
+    default: '植本 裕貴 (Yuki Uemoto) | Multi-Creator & Design Engineer',
+    template: '%s | Yuki Uemoto',
+  },
+  description: 'AI駆動開発とデザインを融合させるマルチクリエイター、植本 裕貴のポートフォリオ。広島を拠点に、Next.jsやSTUDIOを用いたWeb制作、求人LP、AI活用アプリの開発を行っています。',
+  keywords: ['植本 裕貴', 'Yuki Uemoto', 'Design Engineer', 'Multi-Creator', 'デザインエンジニア', 'マルチクリエイター', 'AI駆動開発', 'Next.js', 'STUDIO', '広島'],
 }
 
 export default function RootLayout({

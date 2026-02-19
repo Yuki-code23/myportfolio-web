@@ -31,20 +31,20 @@ export default function ContactPage() {
     let isValid = true
 
     if (!formData.name.trim()) {
-      newErrors.name = 'Name is required'
+      newErrors.name = '名前を入力してください'
       isValid = false
     }
 
     if (!formData.email.trim()) {
-      newErrors.email = 'Email is required'
+      newErrors.email = 'メールアドレスを入力してください'
       isValid = false
     } else if (!isValidEmail(formData.email)) {
-      newErrors.email = 'Please enter a valid email'
+      newErrors.email = '有効なメールアドレスを入力してください'
       isValid = false
     }
 
     if (!formData.message.trim()) {
-      newErrors.message = 'Message is required'
+      newErrors.message = 'メッセージを入力してください'
       isValid = false
     }
 
@@ -66,19 +66,13 @@ export default function ContactPage() {
     {
       icon: HiMail,
       title: 'Email',
-      value: 'contact@portfolio.com',
-      link: 'mailto:contact@portfolio.com',
-    },
-    {
-      icon: HiPhone,
-      title: 'Phone',
-      value: '+1 (555) 123-4567',
-      link: 'tel:+15551234567',
+      value: 'yuki.uemotojb@gmail.com',
+      link: 'mailto:yuki.uemotojb@gmail.com',
     },
     {
       icon: HiLocationMarker,
       title: 'Location',
-      value: 'Tokyo, Japan',
+      value: 'Hiroshima, Japan',
       link: null,
     },
   ]
@@ -106,9 +100,8 @@ export default function ContactPage() {
             variants={fadeInUp}
             className="text-gray-400 text-lg max-w-3xl"
           >
-            Have a project in mind or just want to chat? Feel free to reach out.
-            I'm always open to discussing new projects, creative ideas, or
-            opportunities to be part of your vision.
+            お仕事のご依頼や、制作に関するご相談など、お気軽にお問い合わせください。
+            新しいプロジェクトやクリエイティブなアイデア、あなたのビジョンを形にするお手伝いをさせていただけるのを楽しみにしております。
           </motion.p>
         </AnimatedSection>
       </section>
@@ -171,7 +164,7 @@ export default function ContactPage() {
                   {/* Name */}
                   <div>
                     <label htmlFor="name" className="block text-sm font-medium mb-2">
-                      Your Name *
+                      お名前 *
                     </label>
                     <input
                       type="text"
@@ -181,7 +174,7 @@ export default function ContactPage() {
                       onChange={handleChange}
                       className={`w-full px-4 py-3 bg-light-gray rounded-lg text-white focus:outline-none focus:ring-2 ${errors.name ? 'ring-2 ring-red-500' : 'focus:ring-gold'
                         } smooth-transition`}
-                      placeholder="John Doe"
+                      placeholder="お名前を入力してください"
                     />
                     {errors.name && (
                       <p className="text-red-500 text-sm mt-1">{errors.name}</p>
@@ -191,7 +184,7 @@ export default function ContactPage() {
                   {/* Email */}
                   <div>
                     <label htmlFor="email" className="block text-sm font-medium mb-2">
-                      Your Email *
+                      メールアドレス *
                     </label>
                     <input
                       type="email"
@@ -201,7 +194,7 @@ export default function ContactPage() {
                       onChange={handleChange}
                       className={`w-full px-4 py-3 bg-light-gray rounded-lg text-white focus:outline-none focus:ring-2 ${errors.email ? 'ring-2 ring-red-500' : 'focus:ring-gold'
                         } smooth-transition`}
-                      placeholder="john@example.com"
+                      placeholder="email@example.com"
                     />
                     {errors.email && (
                       <p className="text-red-500 text-sm mt-1">{errors.email}</p>
@@ -211,7 +204,7 @@ export default function ContactPage() {
                   {/* Message */}
                   <div>
                     <label htmlFor="message" className="block text-sm font-medium mb-2">
-                      Your Message *
+                      お問い合わせ内容 *
                     </label>
                     <textarea
                       id="message"
@@ -221,7 +214,7 @@ export default function ContactPage() {
                       rows={6}
                       className={`w-full px-4 py-3 bg-light-gray rounded-lg text-white focus:outline-none focus:ring-2 ${errors.message ? 'ring-2 ring-red-500' : 'focus:ring-gold'
                         } smooth-transition resize-none`}
-                      placeholder="Tell me about your project..."
+                      placeholder="お問い合わせ内容を入力してください..."
                     />
                     {errors.message && (
                       <p className="text-red-500 text-sm mt-1">{errors.message}</p>
@@ -235,7 +228,7 @@ export default function ContactPage() {
                     whileHover={{ scale: 1.02 }}
                     whileTap={{ scale: 0.98 }}
                   >
-                    Send Message
+                    送信する
                   </motion.button>
                 </form>
               </div>

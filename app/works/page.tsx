@@ -160,9 +160,9 @@ export default function WorksPage() {
                   viewport={{ once: true }}
                   transition={{ delay: 0.1 }}
                 >
-                  50+
+                  S-Tier
                 </motion.h3>
-                <p className="text-gray-400">Happy Clients</p>
+                <p className="text-gray-400">Streaming Rank</p>
               </div>
 
               <div>
@@ -173,9 +173,9 @@ export default function WorksPage() {
                   viewport={{ once: true }}
                   transition={{ delay: 0.2 }}
                 >
-                  5+
+                  2025
                 </motion.h3>
-                <p className="text-gray-400">Years Experience</p>
+                <p className="text-gray-400">Tech Transition</p>
               </div>
 
               <div>
@@ -186,9 +186,9 @@ export default function WorksPage() {
                   viewport={{ once: true }}
                   transition={{ delay: 0.3 }}
                 >
-                  15+
+                  10+
                 </motion.h3>
-                <p className="text-gray-400">Awards Won</p>
+                <p className="text-gray-400">Creators Supported</p>
               </div>
             </div>
           </div>
